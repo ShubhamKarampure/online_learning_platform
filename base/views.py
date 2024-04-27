@@ -25,7 +25,6 @@ def login_page(request):
             login(request, user)
         else:
             messages.error(request, 'Username OR Password does not exist!')
-        return redirect('home')
 
     context = {'page': page}
     return render(request, 'base/login_register.html', context)
